@@ -15,7 +15,6 @@ class EditSectionsRequest extends FormRequest
     {
         return true;
 
-
     }
 
 

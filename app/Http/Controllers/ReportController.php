@@ -28,7 +28,7 @@ class ReportController extends Controller
                 $invoices = invoices::select('*')->where('Status','=',$request->type)->get();
                 $type = $request->type;
 
-                return view('reports.invoices_report',compact('type'))->withDetails($invoices);
+                return view('reports.report',compact('type'))->withDetails($invoices);
             }
 
             // في حالة تحديد تاريخ استحقاق
@@ -60,7 +60,7 @@ class ReportController extends Controller
         else {
 
             $invoices = invoices::select('*')->where('invoice_number','=',$request->invoice_number)->get();
-            return view('reports.invoices_report')->withDetails($invoices);
+            return view('reports.report')->withDetails($invoices);
 
         }
 
